@@ -31,10 +31,10 @@ public class EmployeeController {
         employeeService.addEmployee(employee);
     }
 
-    @PutMapping(path = "/employees/{id}")
-    public void updateEmployee(@PathVariable int id, @RequestBody Employee employee) {
-        employeeService.updateEmployee(employee);
-    }
+//    @PutMapping(path = "/employees/{id}")
+//    public void updateEmployee(@PathVariable int id, @RequestBody Employee employee) {
+//        employeeService.updateEmployee(employee);
+//    }
 
 
 

@@ -18,5 +18,10 @@ public interface CompanyService {
     public Company getCertainCompany(int CompanyId);
 
 
+    public void joinAEmployee(Company company,Employee employee);
 
+    public void clearAllEmployee(Company company);
+
+
+    public void addcompanyList(List<Company> inputCompanyList);
 }

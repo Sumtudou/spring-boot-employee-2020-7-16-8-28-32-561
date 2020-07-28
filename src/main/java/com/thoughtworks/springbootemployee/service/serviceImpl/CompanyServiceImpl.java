@@ -31,6 +31,24 @@ public class CompanyServiceImpl implements CompanyService {
         return null;
     }
 
+    @Override
+    public void joinAEmployee(Company company,Employee employee) {
+        for(Company company1:companyList){
+            if(company1.equals(company)){
+                company.addEmployeeToCompany(employee);
+            }
+        }
+    }
+
+    @Override
+    public void clearAllEmployee(Company company) {
+        company.clearAllEmployees();
+    }
+
+    @Override
+    public void addcompanyList(List<Company> inputCompanyList) {
+        companyList.addAll(inputCompanyList);
+    }
 
     @Override
     public void deleteCompany(int companyId) {

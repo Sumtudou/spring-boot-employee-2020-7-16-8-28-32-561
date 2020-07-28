@@ -9,11 +9,14 @@ import java.util.List;
 public interface CompanyService {
     public void addCompany(Company company);
 
-    public List<Employee> getAllCompany();
+    public List<Company> getAllCompany();
 
     public void deleteCompany(int companyId);
 
     public void updateCompany(Company company);
+
+    public Company getCertainCompany(int CompanyId);
+
 
 
 }

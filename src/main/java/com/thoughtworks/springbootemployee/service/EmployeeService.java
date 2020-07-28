@@ -18,4 +18,9 @@ public interface EmployeeService {
     public void updateEmployee(Employee employee);
 
     public void addEmployeeList(List<Employee> inputEmployeeList);
+
+    public List<Employee> getCertainSexEmployee(String sex);
+
+    public List<Employee> getPageOfEmployee(int page,int pageSize);
+
 }

@@ -5,23 +5,23 @@ import com.thoughtworks.springbootemployee.entity.Employee;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-@Service
+
 public interface CompanyService {
-    public void addCompany(Company company);
+    void addCompany(Company company);
 
-    public List<Company> getAllCompany();
+    List<Company> getAllCompany();
 
-    public void deleteCompany(int companyId);
+    void deleteCompany(int companyId);
 
-    public void updateCompany(Company company);
+    void updateCompany(Company company);
 
-    public Company getCertainCompany(int CompanyId);
-
-
-    public void joinAEmployee(Company company,Employee employee);
-
-    public void clearAllEmployee(Company company);
+    Company getCertainCompany(int CompanyId);
 
 
-    public void addcompanyList(List<Company> inputCompanyList);
+    void joinAEmployee(Company company, Employee employee);
+
+    void clearAllEmployee(Company company);
+
+
+    void addcompanyList(List<Company> inputCompanyList);
 }

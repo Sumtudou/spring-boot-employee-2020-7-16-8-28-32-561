@@ -17,6 +17,9 @@ public class CompanyServiceImpl implements CompanyService {
         companyList.add(company);
     }
 
+
+    // TODO build a company ,and join employee
+
     @Override
     public List<Company> getAllCompany() {
         return companyList;

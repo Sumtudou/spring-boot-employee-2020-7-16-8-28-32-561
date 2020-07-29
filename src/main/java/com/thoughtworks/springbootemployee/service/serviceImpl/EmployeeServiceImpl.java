@@ -33,7 +33,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    public List<Employee> getCertainSexEmployee(String sex) {
+    public List<Employee> getCertainGenderEmployee(String sex) {
         List<Employee> employeeMaleList = new ArrayList<>();
         for (Employee employee : employeeList) {
             if (employee.getGender().equals(sex)) {
@@ -48,12 +48,11 @@ public class EmployeeServiceImpl implements EmployeeService {
         List<Employee> employeePageList = new ArrayList<>();
         int length = employeeList.size();
         int startIndex = (page - 1) * pageSize;
-        if (startIndex > length - 1)
-            return null;
-        int endIndex = Math.min(length - 1, page * pageSize - 1);
-        for (int i = startIndex; i <= endIndex; i++) {
-            employeePageList.add(employeeList.get(i));
+        if (startIndex > length - 1){
+            return employeePageList;
         }
-        return employeePageList;
+        int endIndex = Math.min(length - 1, page * pageSize - 1);
+        return employeeList.subList(startIndex,endIndex+1);
+
     }
 }
